@@ -27,7 +27,7 @@ class Search extends React.Component {
 		}
 		try {
 			const res = await fetch(
-				`http://www.omdbapi.com/?apikey=${API_KEY}&s=${this.state.search}${prefix}${this.state.type}`
+				`https://www.omdbapi.com/?apikey=${API_KEY}&s=${this.state.search}${prefix}${this.state.type}`
 			)
 			const data = await res.json()
 			this.props.onUpdateMovies(data.Search, false)
